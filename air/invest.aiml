@@ -1,0 +1,63 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml>
+    <category>
+        <pattern>Hello</pattern>
+        <template>
+            Hello User!
+        </template>
+    </category>    
+
+    <category>
+        <pattern>I am *</pattern>
+        <template>
+            Hello <set name="username"><star/></set>,I am jarviz
+        </template>
+    </category> 
+
+    <category>
+        <pattern>hi</pattern>
+        <template>
+            <srai>hello</srai>
+        </template>
+    </category> 
+
+    <category>
+        <pattern>Good Bye</pattern>
+        <template>
+           Good Bye <get name="username"/>,Thanks for conversation!!
+        </template>
+    </category> 
+
+    <category>
+        <pattern>Any suggestions for Investment</pattern>
+        <template>
+            <random>
+           <li>Go for Mutual Funds</li>
+           <li>Go for PPF</li>
+           <li>Go for Gold</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Mutual Funds</pattern>
+        <template>
+            You will get more Interest but Risk is more
+        </template>
+    </category> 
+
+    <category>
+        <pattern>PPF</pattern>
+        <template>
+            You will get less Interest but your money will be secured.
+        </template>
+    </category> 
+
+    <category>
+        <pattern>Why * ?</pattern>
+        <template>
+            <srai><star/></srai>
+        </template>
+    </category>
+
+</aiml>
