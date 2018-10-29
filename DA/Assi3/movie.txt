@@ -1,0 +1,10 @@
+
+mongoimport --db jontestcsv --collection Aircraft --ignoreBlanks --type csv --headerline --file /home/jon/Desktop/Aircraft.csv
+
+
+ db.movie2.mapReduce( function(){ emit(this.movieid,this.rating); } ,  function(key,val) { var total = 0; for(var i=0;i<val.length;i++) { total = total + val[i]; } return total/val.length; },{out:"sk"} )
+
+> var map=function(){emit(this.Movie,this.Rating)}
+> var reduce=function(key,val){
+... return Array.sum(val)/val.length;
+... }
